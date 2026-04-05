@@ -172,6 +172,47 @@
       color: var(--color-muted);
       font-style: italic;
     }
+    
+    .zelle-section {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .zelle-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem !important;
+    }
+    
+    .zelle-card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    
+    .zelle-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .zelle-hint {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      font-style: italic;
+      margin: 0 !important;
+      text-align: center;
+    }
 
     /* ---- FOOTER ---- */
     footer {
@@ -181,46 +222,6 @@
       color: var(--color-muted);
       border-top: 1px solid var(--color-border);
     }
-    .zelle-section {
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.zelle-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem !important;
-}
-
-.zelle-card {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  background: #fff;
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1rem;
-}
-
-.zelle-card img {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  display: block;
-}
-
-.zelle-hint {
-  font-size: 0.82rem;
-  color: var(--color-muted);
-  font-style: italic;
-  margin: 0 !important;
-  text-align: center;
-}
   </style>
 </head>
 <body>
@@ -239,15 +240,6 @@
 
     </div>
   </header>
-
-  <!-- =============================================
-       NAVIGATION — Add/remove links as needed
-  ============================================= -->
-  <nav>
-    <a href="#about">Our Mission</a>
-    <a href="#contact">Contact</a>
-    <a href="#donate">Donate</a>
-  </nav>
 
   <!-- =============================================
        MAIN CONTENT
@@ -336,6 +328,7 @@
         <p class="zelle-label">Or scan to pay with Zelle</p>
         <div class="zelle-card">
           <img src="https://i.imgur.com/1H3uG8o.png" alt="Zelle QR code" style="width:180px; height:180px; object-fit:contain; display:block;" />
+          <p class="zelle-hint">Open your banking app and scan</p>
         </div>
       </div>
 

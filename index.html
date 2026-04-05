@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CatMamma Rescue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* =============================================
+       EASY TO EDIT: Change colors here
+    ============================================= */
+    :root {
+      --color-warm:    #C8522B;   /* main accent color */
+      --color-light:   #FDF6EF;   /* page background */
+      --color-cream:   #FAF0E4;   /* card background */
+      --color-border:  #E8D5C0;   /* borders */
+      --color-text:    #3B2A1A;   /* main text */
+      --color-muted:   #7A5C44;   /* secondary text */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--color-light);
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+
+    /* ---- HEADER ---- */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .logo-area img {
+      /* EDIT: Replace src with your logo file, e.g. src="logo.png" */
+      /* Remove this whole <img> tag if you want text-only */
+      max-width: 140px;
+      margin-bottom: 0.75rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .logo-area h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      color: var(--color-warm);
+      letter-spacing: -0.01em;
+    }
+
+    .logo-area p.tagline {
+      font-size: 1rem;
+      color: var(--color-muted);
+      margin-top: 0.25rem;
+      font-style: italic;
+      font-family: 'Lora', serif;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.9rem 1.5rem;
+      background: var(--color-warm);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* ---- MAIN CONTENT ---- */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* ---- SECTION CARDS ---- */
+    .card {
+      background: var(--color-cream);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .card h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: var(--color-warm);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--color-text);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- ABOUT SECTION ---- */
+    /* EDIT: Replace the text inside the <p> tags in the HTML below */
+
+    /* ---- CONTACT SECTION ---- */
+    .contact-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+
+    .contact-list .icon {
+      font-size: 1.1rem;
+      width: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-list a {
+      color: var(--color-warm);
+      text-decoration: none;
+    }
+
+    .contact-list a:hover { text-decoration: underline; }
+
+    /* ---- DONATE SECTION ---- */
+    .donate-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+    }
+
+    .donate-btn {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      border-radius: 100px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .donate-btn:hover { opacity: 0.85; }
+
+    .btn-paypal  { background: #003087; color: #fff; }
+    .btn-venmo   { background: #3D95CE; color: #fff; }
+    .btn-cashapp { background: #00D64F; color: #fff; }
+
+    .donate-note {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      font-style: italic;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      border-top: 1px solid var(--color-border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER — Edit your logo & org name here
+  ============================================= -->
+  <header>
+    <div class="logo-area">
+
+      <!-- OPTION A: Use an image logo -->
+      <!-- <img src="logo.png" alt="CatMamma Rescue logo" /> -->
+
+      <!-- OPTION B: Text-only logo (default) -->
+      <h1>🐱 CatMamma Rescue</h1>
+
+      <!-- EDIT: Change this tagline -->
+      <p class="tagline">Rescuing cats, one purr at a time.</p>
+
+    </div>
+  </header>
+
+  <!-- =============================================
+       NAVIGATION — Add/remove links as needed
+  ============================================= -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#donate">Donate</a>
+  </nav>
+
+  <!-- =============================================
+       MAIN CONTENT
+  ============================================= -->
+  <main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="card">
+      <h2>About Us</h2>
+
+      <!-- EDIT: Replace this with your organization's story -->
+      <p>
+        CatMamma Rescue is a volunteer-run, nonprofit cat rescue organization
+        based in [Your City, State]. Founded in [Year], we are dedicated to
+        rescuing cats in need, providing them with medical care and safe foster
+        homes, and finding them loving forever families.
+      </p>
+      <p>
+        We work with local shelters, good samaritans, and a network of devoted
+        foster families to give every cat a second chance. All of our cats are
+        spayed/neutered, vaccinated, and microchipped before adoption.
+      </p>
+      <p>
+        <!-- EDIT: Add anything else — special programs, a personal note, etc. -->
+        We are 100% donation-funded. Every dollar goes directly to the cats in
+        our care. Thank you for your support! 🧡
+      </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <ul class="contact-list">
+
+        <!-- EDIT: Replace with your email -->
+        <li>
+          <span class="icon">✉️</span>
+          <a href="mailto:hello@catmammarescue.org">hello@catmammarescue.org</a>
+        </li>
+
+        <!-- EDIT: Replace with your phone, or delete this <li> if not needed -->
+        <li>
+          <span class="icon">📞</span>
+          <span>(555) 123-4567</span>
+        </li>
+
+        <!-- EDIT: Replace with your Facebook page URL, or delete if not needed -->
+        <li>
+          <span class="icon">📘</span>
+          <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+        </li>
+
+        <!-- EDIT: Replace with your Instagram handle, or delete if not needed -->
+        <li>
+          <span class="icon">📸</span>
+          <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle on Instagram</a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- DONATE SECTION -->
+    <section id="donate" class="card">
+      <h2>Support Our Rescue</h2>
+      <p>
+        Your donation helps cover vet bills, food, litter, and supplies for
+        cats in our care. No amount is too small — every contribution makes a
+        difference!
+      </p>
+
+      <div class="donate-buttons">
+
+        <!-- EDIT: Replace href with your actual PayPal.me link, or delete this button -->
+        <a class="donate-btn btn-paypal" href="https://paypal.me/YOURLINK" target="_blank">
+          PayPal
+        </a>
+
+        <!-- EDIT: Replace href with your Venmo link, or delete this button -->
+        <a class="donate-btn btn-venmo" href="https://venmo.com/YOURHANDLE" target="_blank">
+          Venmo
+        </a>
+
+        <!-- EDIT: Replace href with your Cash App link, or delete this button -->
+        <a class="donate-btn btn-cashapp" href="https://cash.app/$YOURTAG" target="_blank">
+          Cash App
+        </a>
+
+      </div>
+
+      <!-- EDIT: Update or remove this note -->
+      <p class="donate-note">
+        CatMamma Rescue is a registered 501(c)(3) nonprofit.
+        EIN: XX-XXXXXXX. Donations may be tax-deductible.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- EDIT: Update year and org name -->
+    &copy; 2026 CatMamma Rescue &mdash; All rights reserved.
+  </footer>
+
+</body>
+</html>
